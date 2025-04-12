@@ -1,0 +1,13 @@
+#exitBtn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+#exitBtn:hover {
+    -fx-text-fill: red;
+    -fx-background-color: black; /* keep background black on hover */
+}

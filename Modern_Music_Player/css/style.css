@@ -1,0 +1,62 @@
+/* Transparent Dark Background for ListView */
+.list-view {
+    -fx-background-color: rgba(99, 11, 64, 0.727);
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-opacity: 0.8;
+    -fx-padding: 10;
+    -fx-border-width: 1;
+    -fx-border-radius: 0 0 0 15;
+    -fx-background-radius: 0 0 0 15;
+}
+
+/* Remove Horizontal Scrollbar */
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-min-height: 0;
+}
+
+/* Vertical Scrollbar */
+.list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar .thumb {
+    -fx-background-color: #555;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+.list-view .scroll-bar .thumb:hover {
+    -fx-background-color: #777;
+}
+
+/* Base Style for All ListCells */
+.list-cell {
+    -fx-font-family: "Courier New", Courier, monospace;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 8 12;
+    -fx-text-overrun: ellipsis;
+    -fx-wrap-text: false;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect */
+.list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.31);
+    -fx-cursor: hand;
+}
+
+/* Selected item */
+.list-cell:selected {
+    -fx-background-color: rgba(0, 255, 170, 0.2);
+    -fx-text-fill: white;
+}
+
+/* Ensure selected + focused still white */
+.list-cell:selected:focused {
+    -fx-text-fill: white;
+}

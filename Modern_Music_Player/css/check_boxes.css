@@ -1,0 +1,39 @@
+/* Base Style for CheckBox */
+.check-box {
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+/* Style for the box */
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #00BFFF;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-border-width: 2;
+    -fx-pref-width: 16;
+    -fx-pref-height: 16;
+    -fx-padding: 4;
+    -fx-alignment: center;
+}
+
+/* Check mark when selected */
+.check-box:selected .mark {
+    -fx-background-color: #00BFFF;
+    -fx-shape: "M2,6 L5,9 L10,2";
+    -fx-scale-shape: false;
+}
+
+/* Hover effect */
+.check-box:hover .box {
+    -fx-border-color: #1E90FF;
+    -fx-cursor: hand;
+}
+
+/* Pressed effect */
+.check-box:pressed .box {
+    -fx-background-color: rgba(0,191,255,0.2);
+    -fx-border-color: #1E90FF;
+}

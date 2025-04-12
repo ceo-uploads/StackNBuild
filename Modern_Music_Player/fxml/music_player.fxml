@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.MusicPlayerController">
+
+    <left>
+        <ListView fx:id="musicList" prefWidth="200.0" style="-fx-opacity: 20;" stylesheets="@style.css" />
+    </left>
+
+    <center>
+        <VBox spacing="10" style="-fx-background-color: rgba(0, 0, 0, 0.493); -fx-background-radius: 0 0 15 0;">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <!-- Rotating Album Image -->
+            <StackPane>
+                <ImageView fx:id="albumImage" fitHeight="200" fitWidth="200">
+                    <clip>
+                        <Circle centerX="100" centerY="100" radius="100" />
+                    </clip>
+               <StackPane.margin>
+                  <Insets top="30.0" />
+               </StackPane.margin>
+                </ImageView>
+            </StackPane>
+
+            <Label fx:id="songTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Song Title" textFill="WHITE">
+            <VBox.margin>
+               <Insets left="10.0" top="10.0" />
+            </VBox.margin></Label>
+            <Label fx:id="songDetails" style="-fx-font-size: 14px; -fx-font-style: italic;" text="Artist - Album" textFill="WHITE">
+            <VBox.margin>
+               <Insets left="10.0" />
+            </VBox.margin></Label>
+
+            <!-- Seek Slider -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label fx:id="currentTime" style="-fx-font-style: italic;" text="00:00" textFill="WHITE" />
+                <Slider fx:id="seekSlider" minWidth="300" prefHeight="2.0" prefWidth="300.0" style="-fx-background-radius: 10;" stylesheets="@music_slider.css">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></Slider>
+                <Label fx:id="totalTime" style="-fx-font-style: italic;" text="00:00" textFill="WHITE" />
+            </HBox>
+
+            <!-- Controls -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="backwardBtn" stylesheets="@controller_btns.css" text="⏮" />
+                <Button fx:id="playPreviousBtn" stylesheets="@controller_btns.css" text="⏪" />
+                <Button fx:id="playPauseBtn" stylesheets="@controller_btns.css" text="▶" />
+                <Button fx:id="playNextBtn" stylesheets="@controller_btns.css" text="⏩" />
+                <Button fx:id="forwardBtn" stylesheets="@controller_btns.css" text="⏭" />
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            </HBox>
+            
+            <!-- Loop & Volume -->
+            <HBox alignment="CENTER" spacing="20">
+                <CheckBox fx:id="loopCheckbox" style="-fx-font-style: italic;" stylesheets="@check_boxes.css" text="Loop Current Song" textFill="WHITE" />
+                <CheckBox fx:id="shuffle" style="-fx-font-style: italic;" stylesheets="@check_boxes.css" text="Shuffle" textFill="WHITE" />
+                <CheckBox fx:id="loopSongCheckbox" style="-fx-font-style: italic;" stylesheets="@check_boxes.css" text="Loop" textFill="WHITE" />
+                <HBox alignment="CENTER" spacing="5">
+                    <Label text="🔊" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin></Label>
+                    <Slider fx:id="volumeSlider" max="1" min="0" prefWidth="100.0" stylesheets="@volume_slider.css" value="0.5" />
+                </HBox>
+            <VBox.margin>
+               <Insets top="20.0" />
+            </VBox.margin>
+            </HBox>
+        </VBox>
+    </center>
+
+    <top>
+        <AnchorPane fx:id="titleBar" prefHeight="48.0" prefWidth="650.0" stylesheets="@title_bar.css" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="selectBtn" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="174.0" stylesheets="@file_select_btn.css" text="📂 Select MP3 or Folder" />
+                <Button fx:id="exitBtn" layoutX="778.0" layoutY="9.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="23.0" stylesheets="@exit_btn.css" text="X" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            </children>
+        </AnchorPane>
+    </top>
+
+</BorderPane>

@@ -1,0 +1,24 @@
+#seekSlider {
+    -fx-pref-height: 3px;
+    -fx-background-color: rgba(53, 2, 2, 0.596);
+    _fx-background-radius: 5;
+    
+}
+
+#seekSlider .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-pref-height: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(75, 50, 50, 0.712), 3, 0.5, 0, 1);
+}
+
+#seekSlider .track:filled {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1ecfff); /* Blue gradient fill */
+}
+
+#seekSlider .thumb {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    
+}
+

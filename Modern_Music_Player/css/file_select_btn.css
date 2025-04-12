@@ -1,0 +1,19 @@
+#selectBtn {
+    -fx-background-color: #2196F3; /* Blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.3, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10;
+}
+
+#selectBtn:hover {
+    -fx-background-color: #1976D2; /* Darker blue on hover */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-text-fill: #BBDEFB; /* Lighter blue text on hover */
+}

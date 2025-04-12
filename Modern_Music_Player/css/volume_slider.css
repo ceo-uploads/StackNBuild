@@ -1,0 +1,40 @@
+/* Volume Slider */
+#volumeSlider {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF); /* Gradient for the track */
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-pref-height: 10px;
+    -fx-pref-width: 200px; /* Adjust width based on your preference */
+}
+
+/* Track background color */
+#volumeSlider .track {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5px;
+}
+
+/* Volume Slider Thumb */
+#volumeSlider .thumb {
+    -fx-background-color: #FF6347; /* Tomato color for the thumb */
+    -fx-background-radius: 50%; /* Circular thumb */
+    -fx-border-color: #FF4500; /* Darker border for thumb */
+    -fx-border-width: 2px;
+    -fx-pref-height: 10px;
+    -fx-pref-width: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 1, 1); /* Shadow effect */
+}
+
+/* Volume Slider Thumb Hover Effect */
+#volumeSlider .thumb:hover {
+    -fx-background-color: #FF4500; /* Change thumb color on hover */
+    -fx-border-color: #FF6347;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 3, 3); /* Stronger shadow effect */
+}
+
+/* Volume Slider Value Indicator */
+#volumeSlider .value {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
