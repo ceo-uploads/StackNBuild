@@ -1,0 +1,112 @@
+.root {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 8;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 3;
+    -fx-border-radius: 8;
+    -fx-padding: 15;
+}
+
+.nav-btn {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weigtht: bold;
+    -fx-backgroound-radius: 12;
+    -fx-padding: 8 16;
+    -fx-effect: deopshadow(three-pass-bx, rgba(0, 0, 0, 0.3), 4, 0.2, 2, 2);
+    -fx-transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    -fx-background-color: red;
+    -fx-cursor: hand;
+    -fx-scale-x: 0.80;
+    -fx-scale-y: 0.80;
+}
+
+.exit-btn {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-background-radius: 15;
+    -fx-padding: 4 10;
+    -fx-effect: dropshadow(three-pass-bx, rgba(o, o, o, o.4), 4, 0.4, 2, 2);
+}
+
+.exit-btn:hover {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-background-radius: 8;
+    -fx-padding: 4 10;
+    -fx-effect: dropshadow(three-pass-bx, rgba(o, o, o, o.4), 4, 0.4, 2, 2);
+    -fx-cursor: hand;
+}
+
+.day-cell {
+    -fx-background-color: blue;
+    -fx-border-color: #507b9e;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-transition: all 0.3s ease;
+}
+
+.day-cell:hover {
+    -fx-background-color: linear-gradient(to bottom right, #bbdefb, #e57373);
+    -fx-effect: dropshadow(gaussian, #5a5a5a, 12, 0.4, 0, 3);
+    -fx-cursor: hand;
+}
+
+.today-cell {
+    -fx-background-color: linear-gradient(to bottom right, #f44336, #e57373);
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+}
+
+.today-cell:hover {
+    -fx-background-color: linear-gradient(to bottom right, #cf544b, #e57373);
+}
+
+.today-cell .label {
+    -fx-text-fill: white;
+}
+
+.day-cell .label {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.day-cell > .label:first-child {
+    -fx-text-fill: #44a1ed;
+    -fx-font-size: 20px;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-weight: bold;
+}
+
+.day-cell > .label:first-child:hover {
+    -fx-text-fill: white;
+}
+
+.day-cell > .label:last-child {
+    -fx-text-fill: #2196f3;
+    -fx-font-size: 12px;
+    -fx-font-family: "Open Sans", sans-serif;
+    -fx-text-fill: black;
+}
+
+.day-cell > .label:last-child:hover {
+    -fx-text-fill: white;
+}
+
+.today-cell > .label:first-child {
+    -fx-text-fill: black;
+}
+
+#currentTime {
+    -fx-font-size: 24px;
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 10;
+}
